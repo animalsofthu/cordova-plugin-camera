@@ -202,7 +202,7 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
             }
             catch (IllegalArgumentException e)
             {
-                callbackContext.error("Illegal Argument Exception");
+                callbackContext.error(e.getMessage());
                 PluginResult r = new PluginResult(PluginResult.Status.ERROR);
                 callbackContext.sendPluginResult(r);
                 return true;
