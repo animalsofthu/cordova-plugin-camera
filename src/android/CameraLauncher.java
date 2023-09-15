@@ -146,8 +146,8 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         this.callbackContext = callbackContext;
 
-        // this.applicationId = cordova.getContext().getPackageName();
-        this.applicationId = (String) BuildHelper.getBuildConfigValue(cordova.getActivity(), "APPLICATION_ID");
+        this.applicationId = cordova.getContext().getPackageName();
+        // this.applicationId = (String) BuildHelper.getBuildConfigValue(cordova.getActivity(), "APPLICATION_ID");
         this.applicationId = preferences.getString("applicationId", this.applicationId);
 
         if (action.equals(TAKE_PICTURE_ACTION)) {
